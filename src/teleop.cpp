@@ -8,7 +8,6 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg)
 {
 	linear_speed = msg->axes[1];
 	angular_speed = msg->axes[0];
-	std::cout << linear_speed << " | " << angular_speed << std::endl;
 }
 
 int main(int argc, char* argv[])
