@@ -26,6 +26,5 @@ int main(int argc, char* argv[])
 		cmd_vel.angular.z = angular_speed;
 		pubSim.publish(cmd_vel);
 	}
-
 	return 0;
 }
