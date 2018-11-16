@@ -12,7 +12,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
-)
+  )
+
+add_executable(teleop src/teleop.cpp)
+target_link_libraries(teleop ${catkin_LIBRARIES})
+#add_dependencies(tal beginner_tutorials_generate_messages_cpp)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -117,7 +121,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
